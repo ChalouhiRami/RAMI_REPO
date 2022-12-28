@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="./js/script.js"></script>
+
+    <title>Technologies WEB</title>
+ </head>
+ <header>
+    
+     
+        
+      <nav class="contact_navbar">
+       
+        
+        <div class="navbar-logo">
+          <img src="./Images/shop.jpg"style ="height:70px;width:100px;position:relative;top:40px"  alt="My logo">
+        </div>
+        <a href="./Home Page.html" style="margin-left: auto;">Home  </a>|  
+         <a href="./contact.html">Contact</a>
+      </nav>
+       
+     
+
+      
+     <div class="row">
+        <div class="col-2">
+            <h1>Play with Style! <br> </h1>
+            <p>Find everything you need for your next soccer match at our ecommerce store. <br> Shop  now and start dominating the pitch.</p>
+            <a href="#gohere" class="btn">Explore Now &#8594;</a>  <!-- &#8594  (fleche vers droite) -->
+        </div>
+        <div class="col-2">
+            <img name="show" src="./Images/1.jpeg" alt="">
+        </div>
+   
+ </header>
+ <p id="gohere"></p>
+
+     <center><h2 style="margin-top: 100px;margin-bottom: 100px;"><span style="color:#3399ff ">Featured</span>  products</h2></center>
+     <div class="feature-product">
+        <img src="./Images/lampard_signed.jpg" alt="Image 1">
+        <p id="price1">$119.99</p>
+        <img src="./Images/Eric.jpg" alt="Image 2">
+        <p id="price2">$49.99</p>
+        <img src="./Images/david villa.jpeg" alt="Image 3">
+        <p id="price3">$73.99</p>
+       </div>
+      <center><h2 style="margin-top: 100px;">   <span style="color:#3399ff ">Featured</span>  Categories </h2></center>
+          
+      <center>
+        <select style="margin-top: 15px;margin-bottom: 80px;" >
+        
+        <option value="Manchester United">Manchester United Shirts</option>
+        <option value="Chelsea F.C">Chelsea Shirts</option>
+        <option value="barca">FC Barcelona</option>
+        <img src="./Images/drogba.jpg" alt="">
+      </select>
+      </center>
+      <div class="category">
+         <img src="./Images/pogba.jpg" alt="Image 1" id="category1-image1">
+         <p class="product-name" id="item1">Pogba T-Shirt </p>
+         <p id="price4" >$70.99</p>
+         <button class="buy-button" id="category1-buy-button1" onclick="buyItem('category1-image1')">Buy</button>
+
+         <img src="./Images/ronaldo.jpeg" alt="Image 2" id="category1-image2">
+         <p class="product-name" id="item2">Ronaldo T-Shirt</p>
+
+         <p id="price5">$92.99</p>
+         <button class="buy-button" id="category1-buy-button2" onclick="buyItem('category1-image1')">Buy</button>
+
+         <img src="./Images/Eric.jpg" alt="Image 3" id="category1-image3">
+         <p class="product-name" id="item3">Eric Bailly T-Shirt</p>
+         <button class="buy-button" id="category1-buy-button3" onclick="buyItem('category1-image1')">Buy</button>
+
+
+         <p id="price6">$49.99</p>
+
+       </div>
+       <script>
+         const selectElement = document.querySelector('select');
+        
+
+        selectElement.addEventListener('change', (event) => {
+          const selectedValue = event.target.value;
+        
+           if (selectedValue === 'Manchester United') {
+            // le selectedvalue va determiner quel category l'utilisateur a choise et je vais changer les images dans chaque selection.
+            const img1Element = document.getElementById('category1-image1');
+            img1Element.src ='./Images/pogba.jpg';
+            document.getElementById("item1").innerHTML="Pogba T-Shirt";
+            document.getElementById("price4").innerHTML="$70.99"
+
+              
+        
+            const img2Element = document.getElementById('category1-image2');
+            img2Element.src = './Images/ronaldo.jpeg';
+            document.getElementById("item2").innerHTML="Ronaldo T-Shirt"
+            document.getElementById("price5").innerHTML="$92.99 "
+
+        
+            const img3Element = document.getElementById('category1-image3');
+            img3Element.src = './Images/Eric.jpg';
+            document.getElementById("item3").innerHTML="Eric Bailly T-Shirt"
+            document.getElementById("price6").innerHTML="$49.99 "
+
+        
+          } else if (selectedValue === 'Chelsea F.C') {
+            const img1Element = document.getElementById('category1-image1');
+            img1Element.src ='./Images/drogba.jpg';
+            document.getElementById("item1").innerHTML="Droga T-Shirt"
+            document.getElementById("price4").innerHTML="$89.99"
+
+
+        
+        
+            const img2Element = document.getElementById('category1-image2');
+            img2Element.src = './Images/Ashley.jpg';
+            document.getElementById("item2").innerHTML="Ashley Cole T-Shirt"
+            document.getElementById("price5").innerHTML="$61.21 "
+
+        
+            
+            const img3Element = document.getElementById('category1-image3');
+            img3Element.src = './Images/lampard_signed.jpg';
+            document.getElementById("item3").innerHTML="Lampard Signed  T-Shirt"
+            document.getElementById("price6").innerHTML="$119.99 "
+
+        
+        
+           } else if (selectedValue === 'barca') {
+            const img2Element = document.getElementById('category1-image2');
+            img2Element.src = './Images/Abidal_shirt.jpeg';
+            document.getElementById("item2").innerHTML="  Abidal T-Shirt"; 
+            document.getElementById("price5").innerHTML="$55.99 "
+ 
+        
+            const img1Element = document.getElementById('category1-image1');
+            img1Element.src ='./Images/messi.jpg';
+            document.getElementById("item1").innerHTML="  Messi T-Shirt";  
+            document.getElementById("price4").innerHTML="$95.99"
+
+            const img3Element = document.getElementById('category1-image3');
+            img3Element.src = './Images/david villa.jpeg'; 
+            document.getElementById("item3").innerHTML="  David villa T-Shirt";
+            document.getElementById("price6").innerHTML="$73.99 "
+    
+          }
+        });
+       </script>
+      
+      
+      
+      
+<body>
+   
+  <section id="container">
+            
+    <div >
+        <ul>
+            <li><a href="./Home Page.html">HOME</a></li>
+             <li><a href="./contact.html" id="modal" name="modal"> CONTACT US</a></li>
+        </ul>
+        <ul id="sponsors">
+          <li>Sponsors</li>
+          <li><a href="https://www.nike.com/" target="_blank">Nike</a></li>
+          <li><a href="https://www.adidas.com/us" target="_blank">Adidas</a></li>
+          <li> <a href="https://us.puma.com/us/en" target="_blank">puma</a></li>
+        </ul>
+        <div class="lien">
+            <a href="https://www.facebook.com/worldsoccershop/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/globalsoccerstore_com/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+    </div>
+</section>
+    
+    
+</body>
+</html>
