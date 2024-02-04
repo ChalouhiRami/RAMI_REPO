@@ -1,0 +1,95 @@
+--data from 2001 to 2019
+
+-dim continent
+id
+name
+
+-dim subregion -- ????????
+id
+name
+continent
+
+-dim country
+id 
+name
+population
+code
+continent_id --foreign key to dim continent
+
+-dim city
+id
+name
+population
+country_id --from dim_country
+
+-dim_disaster(manually with the id and name)
+id
+disaster_name
+disaster_subgroup
+
+-dim_magnitude_scale(manually)
+id 
+type
+
+
+-fct_disaster_magnitude(link l disaster maa el scale tab3oulo)
+id
+disaster id  --foreign key from dim_disaster
+magnitude scale id --foreign key from dim_magnitude_scale
+
+-fct subregion
+id
+subregion_id --foreign key from dim_subregion
+year
+percentage of malnourishment
+percent_pop_without_water
+population
+
+-fct country
+id
+country_id   --foreign key from dim_country
+subregion_id --foreign key from fct_subregion
+year
+population
+percentage of malnourishment
+GDP per year
+percent_pop_without_water
+average-temperature(F)
+Tree Cover
+Grassland
+Wetland
+Shrubland
+Sparse vegetation
+Cropland
+Artificial surfaces
+Bare area
+Inland water
+
+-fct disasters
+id
+disaster id
+country id
+city id
+subregion_id --foreign key from dim_subregion
+month 
+year
+OFDA(y/n)
+magnitude-scale id
+magnitude value   	(here the value can be numeric or other what do i do??)
+
+
+
+??? ma hattayta mush hesesa ela 3aze
+-fct city country
+city id
+country id
+
+-------------------------------------------------------
+
+agg country
+
+agg city
+
+add disaster
+
+agg yearly country nourishment

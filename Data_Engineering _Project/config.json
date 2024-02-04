@@ -1,0 +1,44 @@
+{
+    "db_host" : "localhost",
+    "db_name" : "Pluto",
+    "db_user" : "postgres",
+    "db_pass" : "Laptop2018",
+    "port_id" : "5433",
+
+
+    "countries": "kaggle",
+    "share_without_improved_water": "kaggle",
+    "avg_temperature": "kaggle",
+    "worldcities": "Simplemaps",
+    "gdp": "UNdata",
+    "prevalence_of_undernourishment": "OurWorldInData",
+    "natural_disasters": "emdat",
+    "valuable_country_data": "OECD",
+    "world_population":"kaggle",
+    "disaster_types":"manual",
+    "disaster_magnitude":"manual",
+    "magnitude_scale":"manual",
+    "continents":"manual",
+    "subregions":"manual",
+    "test":"manual",
+    "staging_tables": {
+        "natural_disasters": {"timestamp_column": "Entry_Date"},
+        "prevalence_of_undernourishment": {"timestamp_column": "Year"},
+        "share_without_improved_water": {"timestamp_column": "Year"},
+        "gdp": {"timestamp_column": "Year"},
+        "avg_temperature": {"timestamp_column": "Year"},  
+        "countries": {"timestamp_column": "last_update"},
+        "worldcities": {"timestamp_column": "last_update"}, 
+        "valuable_country_data": {"timestamp_column": "last_update"},
+        "world_population": {"timestamp_column": "last_update"},
+        "disaster_types": {"timestamp_column": "last_update"},  
+        "disaster_magnitude": {"timestamp_column": "last_update"}, 
+        "magnitude_scale": {"timestamp_column": "last_update"} ,
+        "continents" : {"timestamp_column":"last_update"},
+        "subregions": {"timestamp_column":"last_update"},
+        "test": {"timestamp_column":"last_update"}
+
+        
+      }
+    
+}
